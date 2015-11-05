@@ -25,13 +25,13 @@ knex = sh.wrap(knex);
 
 var buildValues = sh.buildValues;
 
-var sql = 'INSERT INTO users (username, password_hash, email, favorite_color) VALUES '
+var sql = 'INSERT INTO users (username, password_hash, email, favorite_color) VALUES ('
           + buildValues([
             'yourUsername',
             '4Cc1h1Nq02YthshONRAB5IFZlwdrMGXZumE543tERRihu',
             'yourUsername@example.com',
             'blue'
-            ] + ' returning id');
+            ] + ') returning id');
 
 knex.run(sql, function(err, user) {
   // Do something
