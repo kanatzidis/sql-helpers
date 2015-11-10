@@ -7,6 +7,7 @@ module.exports = {
     return knex;
   },
   buildValues: function(arr) {
+    if(!Array.isArray(arr)) arr = [arr];
     return arr.map(function(i) { return '\'' + i + '\''; }).join(', ');
   }
 };
