@@ -1,6 +1,6 @@
 {
   "name": "sql-helpers",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "A tiny wrapper around knex and other utility functions to give it a simple interface.",
   "main": "index.js",
   "scripts": {
